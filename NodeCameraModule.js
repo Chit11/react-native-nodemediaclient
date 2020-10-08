@@ -21,6 +21,7 @@ class NodeCameraView extends Component {
     if (!this.props.onStatus) {
       return;
     }
+    console.log("test")
     this.props.onStatus(event.nativeEvent.code, event.nativeEvent.msg);
   }
 
