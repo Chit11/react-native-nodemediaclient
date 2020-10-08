@@ -92,6 +92,11 @@ public class NodeCameraViewManager extends ViewGroupManager<RCTNodeCameraView> {
     public void setDenoise(RCTNodeCameraView view, boolean denoise) {
         view.setDenoise(denoise);
     }
+    
+     @ReactProp(name = "pause")
+    public void jniAudioMuted(RCTNodeCameraView view, boolean pause) {
+        view.jniAudioMuted(pause);
+    }
 
     @ReactProp(name = "dynamicRateEnable")
     public void setDynamicRateEnable(RCTNodeCameraView view, boolean dynamicRateEnable) {
