@@ -44,6 +44,7 @@ public class RCTNodeCameraView extends NodeCameraView implements LifecycleEventL
     private boolean denoise = false;
     private boolean dynamicRateEnable = true;
     private int smoothSkinLevel = 0;
+    private boolean pause = false;
 
 
     public RCTNodeCameraView(@NonNull ThemedReactContext context) {
@@ -95,6 +96,11 @@ public class RCTNodeCameraView extends NodeCameraView implements LifecycleEventL
 
     public void setDenoise(boolean denoise) {
         this.denoise = denoise;
+    }
+    
+    public void jniAudioMuted(boolean pause) {
+        this.pause = pause;
+        mNodePublisher.jniAudioMuted(pause);
     }
 
     public void setDynamicRateEnable(boolean dynamicRateEnable) {
