@@ -1,3 +1,5 @@
+
+
 //
 //  NodeCameraViewManager.java
 //
@@ -93,7 +95,10 @@ public class NodeCameraViewManager extends ViewGroupManager<RCTNodeCameraView> {
         view.setDenoise(denoise);
     }
     
-   
+     @ReactProp(name = "audioEnable")
+    public void setAudioEnable(RCTNodeCameraView view, boolean audioEnable) {
+        view.setAudioEnable(audioEnable);
+    }
 
     @ReactProp(name = "dynamicRateEnable")
     public void setDynamicRateEnable(RCTNodeCameraView view, boolean dynamicRateEnable) {
